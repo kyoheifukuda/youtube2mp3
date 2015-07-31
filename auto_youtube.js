@@ -24,7 +24,9 @@ describe('youtube', function(){
         .setValue('#youtube-url', 'https://www.youtube.com/watch?v=iS1g8G_njx8')
         .click('#submit')
         .then(function(){
-            return  client.click('#details  #dl_link a:nth-Child(3)');
+          setTimeout(function(){
+            return  client.click('#details > #dl_link >a:nth-Child(3)');
+          }, 2000);
         });
       });
 });
